@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:src="@drawable/usuario" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_nombre"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="110dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:text="Nombre:" />
+
+        <TextView
+            android:id="@+id/tv_nombre"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="77"
+            android:maxLines="1"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_correo"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/layout_nombre"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:text="Correo:" />
+
+        <TextView
+            android:id="@+id/tv_correo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="77"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_edad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_correo"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="33"
+            android:text="Edad:" />
+
+        <TextView
+            android:id="@+id/tv_edad"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_weight="77"
+            android:text="0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_telefono"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_below="@+id/layout_edad"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:text="Teléfono:" />
+
+        <TextView
+            android:id="@+id/tv_telefono"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="77"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_below="@+id/layout_telefono"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="33"
+            android:text="Provincia:" />
+
+        <TextView
+            android:id="@+id/tv_provincia"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="77" />
+
+    </LinearLayout>
+
+    s
+
+    <Button
+        android:id="@+id/btn_eliminar"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="64dp"
+        android:layout_marginStart="43dp"
+        android:text="Eliminar" />
+
+    <Button
+        android:id="@+id/btn_descargar"
+        android:layout_width="120dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/btn_eliminar"
+        android:layout_marginEnd="42dp"
+        android:text="Descargar" />
+
+</RelativeLayout>

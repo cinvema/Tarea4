@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listTextoOptions">
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+    </string-array>
+
+    <string-array name="listTextoValues">
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+    </string-array>
+
+    <string-array name="listVisualOptions">
+        <item>Lista</item>
+        <item>Columnas</item>
+    </string-array>
+
+    <string-array name="listVisualValues">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="listColorOptions">
+        <item>Celeste</item>
+        <item>Verde</item>
+        <item>Naranja</item>
+    </string-array>
+
+    <string-array name="listColorValues">
+        <item>#b5d6e1</item>
+        <item>#FF91E673</item>
+        <item>#e6915d</item>
+    </string-array>
+</resources>

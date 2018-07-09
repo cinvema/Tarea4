@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <PreferenceCategory
+        android:summary="Lista de Contactos"
+        android:title="Preferencias Lista Contactos" >
+        <ListPreference
+            android:entries="@array/listTextoOptions"
+            android:entryValues="@array/listTextoValues"
+            android:key="tamano_letra"
+            android:summary="Indique el tamaño de la letra"
+            android:title="Tamaño letra"
+            />
+
+        <ListPreference
+            android:entries="@array/listVisualOptions"
+            android:entryValues="@array/listVisualValues"
+            android:key="listprefvisual"
+            android:summary="Visualización de contactos"
+            android:title="Visualización de contactos" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:summary="Detalles de Contacto"
+        android:title="Preferencias Detalles Contacto" >
+
+        <CheckBoxPreference
+            android:title="Habilitar/Deshabilitar Botón"
+            android:defaultValue="true"
+            android:summary="Habilite o deshabilite boton eliminar"
+            android:key="checkboxPref" />
+
+        <ListPreference
+            android:entries="@array/listColorOptions"
+            android:entryValues="@array/listColorValues"
+            android:key="listprefcolor"
+            android:summary="Colores"
+            android:title="Colores de fondo" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
