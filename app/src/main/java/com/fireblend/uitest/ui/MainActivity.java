@@ -21,6 +21,7 @@ import android.widget.TextView;
 import com.fireblend.uitest.R;
 import com.fireblend.uitest.data.ContactDB;
 import com.fireblend.uitest.data.DatabaseHelper;
+import com.fireblend.uitest.logic.GestorContactos;
 import com.fireblend.uitest.logic.MyAdapter;
 import com.j256.ormlite.dao.Dao;
 import java.util.ArrayList;
@@ -29,18 +30,13 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
+     private RecyclerView mRecyclerView;
      RecyclerView.Adapter mAdapter;
      RecyclerView.LayoutManager mLayoutManager;
      Button botonAgregarContacto;
-     TextView tvNombre;
-        GridLayout grid;
-//     Button botonEliminar;
-//     MenuItem menu;
-//    RelativeLayout realtiveLayoutPadre;
-//    LinearLayout gridLayout;
+     GestorContactos gestorContactos;
 
-   // private static  int PREFS =R.layout.app_preferences;
+
     private SharedPreferences prefs;
 
     DatabaseHelper bdHelper;
@@ -58,16 +54,13 @@ public class MainActivity extends AppCompatActivity {
         //para que al darle atras  se devuelva al main
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //obtener los contactos de la bd
-        //Inicializamos el DBHelper
-        if(bdHelper == null) {
-            bdHelper = new DatabaseHelper(MainActivity.this);
-        }
 
         try {
-            //Recuperamos el dao
-            Dao<ContactDB, Integer> contactDao = bdHelper.getContactDao();
-            contactDBS = (ArrayList)contactDao.queryForAll();
+
+            if(gestorContactos == null)
+                gestorContactos = new GestorContactos(this);
+
+            contactDBS = gestorContactos.querryAll();
 
         }catch (Exception e){
 

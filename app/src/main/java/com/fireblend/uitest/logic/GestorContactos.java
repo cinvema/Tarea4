@@ -8,6 +8,7 @@ import com.fireblend.uitest.ui.DetailsActivity;
 import com.j256.ormlite.dao.Dao;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class GestorContactos {
 
@@ -50,6 +51,20 @@ public class GestorContactos {
         }
 
     }
+
+    public ArrayList<ContactDB> querryAll(){
+
+        ArrayList<ContactDB> contactDBS= null;
+        try {
+             contactDBS = (ArrayList)mContactDao.queryForAll();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return  contactDBS;
+
+    }
+
 
 
 }
