@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.fireblend.uitest.R;
 import com.fireblend.uitest.data.ContactDB;
 import com.fireblend.uitest.data.DatabaseHelper;
+import com.fireblend.uitest.logic.Gestor;
 import com.fireblend.uitest.logic.GestorContactos;
 import com.j256.ormlite.dao.Dao;
 import java.io.File;
@@ -91,8 +92,9 @@ public class DetailsActivity extends AppCompatActivity implements  DetailsFragme
 
         try {
 
-            if(gestorContactos == null)
-                gestorContactos = new GestorContactos(this);
+            gestorContactos = Gestor.obtenerGestor(this);
+//            if(gestorContactos == null)
+//                gestorContactos = new GestorContactos(this);
 
             contact = gestorContactos.getContacto(id);
 

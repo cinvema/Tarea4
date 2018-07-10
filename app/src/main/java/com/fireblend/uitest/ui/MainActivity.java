@@ -21,6 +21,7 @@ import android.widget.TextView;
 import com.fireblend.uitest.R;
 import com.fireblend.uitest.data.ContactDB;
 import com.fireblend.uitest.data.DatabaseHelper;
+import com.fireblend.uitest.logic.Gestor;
 import com.fireblend.uitest.logic.GestorContactos;
 import com.fireblend.uitest.logic.MyAdapter;
 import com.j256.ormlite.dao.Dao;
@@ -57,9 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
         try {
 
-            if(gestorContactos == null)
-                gestorContactos = new GestorContactos(this);
-
+            gestorContactos = Gestor.obtenerGestor(this);
             contactDBS = gestorContactos.querryAll();
 
         }catch (Exception e){
